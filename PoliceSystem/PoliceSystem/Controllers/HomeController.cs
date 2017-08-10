@@ -129,7 +129,7 @@ namespace PoliceSystem.Controllers
             {
                 if (CriminalSearch != null)
                 {
-                    var searchcriminal = db.Criminals.Where(a => a.Cnic == CriminalSearch.Cnic).ToList();
+                    var searchcriminal = db.Criminals.Where(a => a.Cnic == CriminalSearch.Cnic || a.Name == CriminalSearch.Name).ToList();
                     return searchcriminal;
                 }
                 else
